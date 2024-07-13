@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	plugins: [require("daisyui")],
 	content: [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,6 +19,7 @@ module.exports = {
 			turq: "#41C9E2",
 			lightBlue: "#ACE2E1",
 			beige: "#F7EEDD",
+			white: "#Fff",
 		},
 	},
 	plugins: [],
