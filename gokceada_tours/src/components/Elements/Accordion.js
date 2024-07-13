@@ -7,7 +7,6 @@ import { FaMinus } from "react-icons/fa6";
 
 const Accordion = (props) => {
 	const { title, children, slug, className } = props;
-	console.log(children);
 
 	const [open, setOpen] = useState(false);
 
