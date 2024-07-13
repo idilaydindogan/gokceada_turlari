@@ -32,9 +32,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const headers = [
-	{ id: 3, name: "Gökçeada Hakkında" },
-	{ id: 4, name: "Biz Kimiz" },
-	{ id: 5, name: "İletişim" },
+	{ id: 3, name: "Gökçeada Hakkında", href: "/about" },
+	{ id: 4, name: "Biz Kimiz", href: "/about" },
+	{ id: 5, name: "İletişim", href: "/about" },
 ];
 const products = [
 	{
@@ -162,7 +162,7 @@ const Navbar = () => {
 					</Popover>
 
 					{headers.map((header) => (
-						<Link key={header.id} href="/">
+						<Link key={header.id} href={header.href}>
 							<h4 className="font-semibold leading-6">{header.name}</h4>
 						</Link>
 					))}
