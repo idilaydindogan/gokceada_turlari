@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../public/Keci_logo_removebg.png";
 
-import { useState } from "react";
+require("dotenv").config();
+import Airtable from "airtable";
+
 import {
 	Dialog,
 	DialogPanel,
@@ -33,7 +35,7 @@ import Link from "next/link";
 
 const headers = [
 	{ id: 3, name: "Gökçeada Hakkında", href: "/about" },
-	{ id: 4, name: "Biz Kimiz", href: "/about" },
+	{ id: 4, name: "Biz Kimiz", href: "/aboutUs" },
 	{ id: 5, name: "İletişim", href: "/about" },
 ];
 const products = [
@@ -68,13 +70,31 @@ const products = [
 		icon: ArrowPathIcon,
 	},
 ];
-const callsToAction = [
-	{ name: "Watch demo", href: "#", icon: PlayCircleIcon },
-	{ name: "Contact sales", href: "#", icon: PhoneIcon },
-];
+// const callsToAction = [
+// 	{ name: "Watch demo", href: "#", icon: PlayCircleIcon },
+// 	{ name: "Contact sales", href: "#", icon: PhoneIcon },
+// ];
+
+const base = new Airtable({
+	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
+}).base("appXs4b7ViU3gh1eK");
 
 const Navbar = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const [data, setData] = useState([]);
+	useEffect(() => {
+		base("TourLists")
+			.select({
+				// Selecting the first 3 records in Grid view:
+
+				view: "Grid view",
+			})
+			.eachPage((records, fetchNextPage) => {
+				setData(records);
+				fetchNextPage();
+			});
+	}, []);
+
 	return (
 		<header className="bg-beige text-blue text-base">
 			<nav
@@ -121,41 +141,28 @@ const Navbar = () => {
 							transition
 							className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
 						>
-							<div className="p-4">
-								{products.map((item) => (
+							<div className="p-8">
+								<div className="flex-auto pl-4 pb-2">
+									<Link
+										href="/allTours"
+										className="block font-semibold hover:decoration hover:underline cursor-pointer"
+									>
+										Tüm Turlar
+										<span className="absolute inset-0" />
+									</Link>
+								</div>
+								{data.map((item) => (
 									<div
-										key={item.name}
+										key={item.id}
 										className="group relative flex items-center gap-x-6 rounded-lg p-4  leading-6 hover:bg-gray-50"
 									>
-										<div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-											<item.icon
-												aria-hidden="true"
-												className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-											/>
-										</div>
 										<div className="flex-auto">
-											<a href={item.href} className="block font-semibold ">
-												{item.name}
+											<p className="block font-semibold hover:decoration hover:underline cursor-pointer">
+												{item.fields.Name}
 												<span className="absolute inset-0" />
-											</a>
-											<p className="mt-1 text-gray-600">{item.description}</p>
+											</p>
 										</div>
 									</div>
-								))}
-							</div>
-							<div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-								{callsToAction.map((item) => (
-									<a
-										key={item.name}
-										href={item.href}
-										className="flex items-center justify-center gap-x-2.5 p-3  font-semibold leading-6  hover:bg-gray-100"
-									>
-										<item.icon
-											aria-hidden="true"
-											className="h-5 w-5 flex-none text-gray-400"
-										/>
-										{item.name}
-									</a>
 								))}
 							</div>
 						</PopoverPanel>
@@ -204,18 +211,6 @@ const Navbar = () => {
 											className="h-5 w-5 flex-none group-data-[open]:rotate-180"
 										/>
 									</DisclosureButton>
-									<DisclosurePanel className="mt-2 space-y-2">
-										{[...products, ...callsToAction].map((item) => (
-											<DisclosureButton
-												key={item.name}
-												as="a"
-												href={item.href}
-												className="block rounded-lg py-2 pl-6 pr-3  font-semibold leading-7  hover:bg-gray-50"
-											>
-												{item.name}
-											</DisclosureButton>
-										))}
-									</DisclosurePanel>
 								</Disclosure>
 								<div className="">
 									{headers.map((header) => (
