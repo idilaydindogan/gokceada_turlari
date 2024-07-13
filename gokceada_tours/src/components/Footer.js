@@ -28,8 +28,9 @@ const footerInfo = [
 ];
 
 const Footer = () => {
+	// <footer className="mt-20 py-4 px-8 w-full absolute bottom-0">
 	return (
-		<footer className=" py-4 px-8 w-full absolute bottom-0">
+		<footer className="">
 			<div className="hidden lg:block">
 				<div className="bg-beige border-b border-blue h-16 flex justify-between px-20 items-center text-blue">
 					<h2 className="text-2xl font-semibold">Gökçeada Turları</h2>
@@ -45,7 +46,7 @@ const Footer = () => {
 						/>
 					</Link>
 				</div>
-				<div className="bg-beige flex justify-between px-20 items-start  text-blue">
+				<div className="bg-beige flex justify-between px-20 py-4 items-start  text-blue">
 					<Link className="" href="/">
 						<Image
 							src={logo}
@@ -83,7 +84,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="lg:hidden">
+			<div className="lg:hidden ">
 				<Link className="flex justify-center border-t border-blue" href="/">
 					<Image
 						src={logo}
@@ -114,7 +115,6 @@ const Footer = () => {
 					/>
 				))}
 			</div>
-			<div className=""></div>
 		</footer>
 	);
 };
