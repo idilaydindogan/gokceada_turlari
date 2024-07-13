@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 require("dotenv").config();
 import Airtable from "airtable";
 import image from "../../public/about_island1.jpg";
-import { apiKey } from "airtable/lib/airtable";
+
 import Image from "next/image";
 import AboutSections from "./Elements/AboutSections";
 
@@ -14,7 +14,7 @@ const base = new Airtable({
 const AboutPage = () => {
 	const [data, setData] = useState([]);
 	useEffect(() => {
-		base("TourList")
+		base("AboutIsland")
 			.select({
 				// Selecting the first 3 records in Grid view:
 
@@ -22,14 +22,12 @@ const AboutPage = () => {
 			})
 			.eachPage((records, fetchNextPage) => {
 				setData(records);
-
-				console.log("records", records);
 				fetchNextPage();
 			});
 	}, []);
 
 	return (
-		<div className="h-full">
+		<div className="min-h-screen">
 			<div className=" w-full  relative mt-4">
 				<Image
 					src={image}
