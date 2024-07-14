@@ -26,6 +26,7 @@ const AboutPage = () => {
 			});
 	}, []);
 
+	console.log("data", data);
 	return (
 		<div className="min-h-screen">
 			<div className=" w-full  relative mt-4">

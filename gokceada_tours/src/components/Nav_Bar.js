@@ -6,7 +6,7 @@ require("dotenv").config();
 import Airtable from "airtable";
 import Link from "next/link";
 import Image from "next/image";
-import NavbarLinks from "./Elements/NavbarLinksMobile";
+import NavbarLinks from "./Elements/NavbarLinks";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 
@@ -49,7 +49,7 @@ const Nav_Bar = () => {
 					<Link href="/">
 						<h4 className="font-semibold leading-6">Anasayfa</h4>
 					</Link>
-					<NavbarLinks data={data} />
+					<NavbarLinks setOpen={setOpen} open={open} data={data} />
 				</div>
 				<button className="lg:hidden pr-8" onClick={() => setOpen(!open)}>
 					<GiHamburgerMenu size={28} />
@@ -72,11 +72,11 @@ const Nav_Bar = () => {
 								className="w-40 h-40"
 							/>
 						</Link>
-						<Link href="/">
-							<button onClick={() => setOpen(false)}>
+						<button onClick={() => setOpen(false)}>
+							<Link href="/">
 								<h4 className="font-semibold leading-6 pl-8">Anasayfa</h4>
-							</button>
-						</Link>
+							</Link>{" "}
+						</button>
 						<NavbarLinks data={data} setOpen={setOpen} open={open} />
 					</div>
 				)}

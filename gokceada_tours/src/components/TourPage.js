@@ -6,6 +6,7 @@ import Image from "next/image";
 const base = new Airtable({
 	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
 }).base("appXs4b7ViU3gh1eK");
+
 const TourPage = ({ id }) => {
 	const [data, setData] = useState([]);
 
@@ -23,13 +24,23 @@ const TourPage = ({ id }) => {
 	return (
 		<div className="min-h-screen mt-12 flex flex-col items-center space-y-4 px-12 mb-12">
 			<div className="flex justify-center">
-				<Image
-					src={`/tourImages/${data.ImageSrc}`}
-					alt="gokceada tours"
-					className="opacity-90 text-center"
-					width={500}
-					height={300}
-				/>
+				{data.ImageSrc ? (
+					<Image
+						src={`/tourImages/${data.ImageSrc}`}
+						alt="gokceada tours"
+						className="opacity-90 text-center"
+						width={500}
+						height={300}
+					/>
+				) : (
+					<Image
+						src={`/tourImages/rumKoy.jpeg`}
+						alt={data.Name}
+						className="opacity-90 text-center"
+						width={500}
+						height={300}
+					/>
+				)}
 			</div>
 			<div className="text-2xl text-blue pt-4 bg-lightBlue rounded-md w-full text-center p-4 ">
 				{data.Name}
@@ -48,6 +59,7 @@ const TourPage = ({ id }) => {
 					<p>{data.Body3}</p>
 					<p>{data.Body4}</p>
 					<p>{data.Body5}</p>
+					<p>{data.Body6}</p>
 				</div>
 				<div className="hidden md:block w-2/5 space-y-4 border border-lightBlue p-2">
 					<h5 className="font-medium underline">Kişi Başı Tur Fiyatı</h5>
