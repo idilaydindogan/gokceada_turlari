@@ -96,7 +96,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<header className="bg-beige text-blue text-base">
+		<header className="bg-beige text-blue text-base shadow-md">
 			<nav
 				aria-label="Global"
 				className="mx-auto flex max-w-7xl items-center justify-between py-8 lg:px-8 px-4"
@@ -157,10 +157,13 @@ const Navbar = () => {
 										className="group relative flex items-center gap-x-6 rounded-lg p-4  leading-6 hover:bg-gray-50"
 									>
 										<div className="flex-auto">
-											<p className="block font-semibold hover:decoration hover:underline cursor-pointer">
+											<Link
+												href={`/allTours/${item.id}`}
+												className="block font-semibold hover:decoration hover:underline cursor-pointer"
+											>
 												{item.fields.Name}
 												<span className="absolute inset-0" />
-											</p>
+											</Link>
 										</div>
 									</div>
 								))}

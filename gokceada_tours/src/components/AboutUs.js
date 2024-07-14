@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutUs = () => {
 	return (
-		<div className="min-h-screen text-blue px-8 mt-12">
+		<div className="min-h-screen text-blue px-12 mt-12">
 			<div className=" w-full flex justify-center mt-4">
 				<Image
 					src={personalCard}
