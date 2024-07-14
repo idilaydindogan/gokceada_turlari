@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HomePage = () => {
 	return (
-		<div className=" w-full  relative">
+		<div className=" w-full min-h-screen  relative">
 			<Image
 				src={homebanner}
 				alt="gokceada turlari brand logo"
