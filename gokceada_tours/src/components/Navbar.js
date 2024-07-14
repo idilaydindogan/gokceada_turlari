@@ -36,7 +36,7 @@ import Link from "next/link";
 const headers = [
 	{ id: 3, name: "Gökçeada Hakkında", href: "/about" },
 	{ id: 4, name: "Biz Kimiz", href: "/aboutUs" },
-	{ id: 5, name: "İletişim", href: "/about" },
+	{ id: 5, name: "İletişim", href: "/contact" },
 ];
 const products = [
 	{
