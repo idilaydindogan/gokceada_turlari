@@ -215,6 +215,15 @@ const Navbar = () => {
 										/>
 									</DisclosureButton>
 									<DisclosurePanel className="mt-2 space-y-2">
+										<div className="flex-auto pl-4 pb-2">
+											<Link
+												href="/allTours"
+												className="block font-semibold hover:decoration hover:underline cursor-pointer"
+											>
+												Tüm Turlar
+												<span className="absolute inset-0" />
+											</Link>
+										</div>
 										{data.map((item) => (
 											<div
 												key={item.id}
