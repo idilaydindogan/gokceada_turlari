@@ -70,10 +70,10 @@ const products = [
 		icon: ArrowPathIcon,
 	},
 ];
-// const callsToAction = [
-// 	{ name: "Watch demo", href: "#", icon: PlayCircleIcon },
-// 	{ name: "Contact sales", href: "#", icon: PhoneIcon },
-// ];
+const callsToAction = [
+	{ name: "Watch demo", href: "#", icon: PlayCircleIcon },
+	{ name: "Contact sales", href: "#", icon: PhoneIcon },
+];
 
 const base = new Airtable({
 	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
@@ -214,10 +214,28 @@ const Navbar = () => {
 											className="h-5 w-5 flex-none group-data-[open]:rotate-180"
 										/>
 									</DisclosureButton>
+									<DisclosurePanel className="mt-2 space-y-2">
+										{data.map((item) => (
+											<div
+												key={item.id}
+												className="group relative flex items-center gap-x-6 rounded-lg p-2  leading-6 hover:bg-gray-50"
+											>
+												<div className="flex-auto">
+													<Link
+														href={`/allTours/${item.id}`}
+														className="pl-1 block font-semibold hover:decoration hover:underline cursor-pointer"
+													>
+														{item.fields.Name}
+														<span className="absolute inset-0" />
+													</Link>
+												</div>
+											</div>
+										))}
+									</DisclosurePanel>
 								</Disclosure>
 								<div className="">
 									{headers.map((header) => (
-										<Link key={header.id} href="/" className="">
+										<Link key={header.id} href={`${header.href}`} className="">
 											<h4 className="pb-4 font-semibold leading-6">
 												{header.name}
 											</h4>
