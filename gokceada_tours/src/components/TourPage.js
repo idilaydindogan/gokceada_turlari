@@ -15,11 +15,11 @@ const TourPage = ({ id }) => {
 				console.error(err);
 				return;
 			}
-			console.log(record);
+
 			setData(record.fields);
 		});
 	}, [id]);
-	console.log(data.ImageSrc);
+
 	return (
 		<div className="min-h-screen mt-12 flex flex-col items-center space-y-4 px-12 mb-12">
 			<div className="flex justify-center">
