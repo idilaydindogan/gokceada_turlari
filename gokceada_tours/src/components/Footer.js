@@ -115,6 +115,9 @@ const Footer = () => {
 					/>
 				))}
 			</div>
+			<div className="bg-lightBlue h-12 flex justify-center items-center text-xs text-blue">
+				<p>Copyright © 2024 KETENCEK I.T.</p>
+			</div>
 		</footer>
 	);
 };

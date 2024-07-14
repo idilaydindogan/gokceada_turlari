@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -53,11 +54,11 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 					)}
 				</div>
 				{headers.map((header) => (
-					<Link key={header.id} href={header.href}>
-						<button onClick={() => setOpen(false)}>
+					<button key={header.id} onClick={() => setOpen(false)}>
+						<Link href={header.href}>
 							<h4 className="font-semibold leading-6 pl-8">{header.name}</h4>
-						</button>
-					</Link>
+						</Link>
+					</button>
 				))}
 			</div>
 
@@ -79,13 +80,15 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 					<div className=" h-full absolute top-12 z-50 ">
 						{linkOpen && (
 							<div className="bg-lightBlue p-4 shadow-xl">
-								<Link
-									href="/allTours"
-									className="p-2 block font-semibold hover:decoration hover:underline cursor-pointer"
-								>
-									Tüm Turlar
-									<span className="absolute inset-0" />
-								</Link>
+								<button onClick={() => setLinkOpen(false)}>
+									<Link
+										href="/allTours"
+										className="p-2 block font-semibold hover:decoration hover:underline cursor-pointer"
+									>
+										Tüm Turlar
+										<span className="absolute inset-0" />
+									</Link>
+								</button>
 
 								{data.map((item) => (
 									<div key={item.id} className=" p-2">
@@ -104,10 +107,12 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 					</div>
 				</div>
 				{headers.map((header) => (
-					<button onClick={() => setOpen(false)} key={header.id}>
-						<Link href={header.href}>
-							<h4 className="font-semibold leading-6 pl-4">{header.name}</h4>
-						</Link>
+					<button
+						onClick={() => setOpen(false)}
+						key={header.id}
+						className="block font-semibold leading-6 pl-4"
+					>
+						<Link href={header.href}>{header.name}</Link>
 					</button>
 				))}
 			</div>
@@ -116,35 +121,3 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 };
 
 export default NavbarLinks;
-
-// {
-// 	linkOpen && (
-// 		<div className="hidden lg:block">
-// 			<div className="flex-auto pl-4 pb-2">
-// 				<Link
-// 					href="/allTours"
-// 					className="block font-semibold hover:decoration hover:underline cursor-pointer"
-// 				>
-// 					Tüm Turlar
-// 					<span className="absolute inset-0" />
-// 				</Link>
-// 			</div>
-// 			{data.map((item) => (
-// 				<div
-// 					key={item.id}
-// 					className="group relative flex items-center gap-x-6 rounded-lg p-4  leading-6 hover:bg-gray-50"
-// 				>
-// 					<div className="flex-auto">
-// 						<Link
-// 							href={`/allTours/${item.id}`}
-// 							className="block font-semibold hover:decoration hover:underline cursor-pointer"
-// 						>
-// 							{item.fields.Name}
-// 							<span className="absolute inset-0" />
-// 						</Link>
-// 					</div>
-// 				</div>
-// 			))}
-// 		</div>
-// 	);
-// }

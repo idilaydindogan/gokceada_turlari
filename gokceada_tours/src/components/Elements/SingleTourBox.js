@@ -1,12 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-// import dalis from "../../../public/tourImages/dalis.jpeg";
-// import yildiz from "../../../public/tourImages/dalis.jpeg";
-// import lezzetTur from "../../../public/tourImages/dalis.jpeg";
-// import dalis from "../../../public/tourImages/dalis.jpeg";
-// import dalis from "../../../public/tourImages/dalis.jpeg";
-// import dalis from "../../../public/tourImages/dalis.jpeg";
 
 const SingleTourBox = ({ tour }) => {
 	return (
