@@ -40,7 +40,7 @@ const AllToursListPage = () => {
 			<div className="bg-lightBlue w-full p-8 text-center rounded-md mb-8">
 				<h1 className="text-2xl font-semibold text-blue">Gökçeada Turlar</h1>
 			</div>
-			<div className="grid grid-cols-2 justify-items-center">
+			<div className="grid md:grid-cols-2 justify-items-center">
 				{data.map((tour) => (
 					<SingleTourBox tour={tour} />
 				))}
