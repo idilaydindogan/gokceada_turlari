@@ -17,10 +17,10 @@ const HomePage = () => {
 				}}
 			/>
 			<div className="absolute top-[200px] flex flex-col w-full justify-center text-center">
-				<h1 className="text-5xl font-semibold text-beige border-t border-white mx-20 pt-8">
+				<h1 className="text-3xl lg:text-5xl font-semibold text-beige border-t border-white mx-20 pt-8">
 					GÖKÇEADA'DASINIZ YAVAŞLAYIN!
 				</h1>
-				<h5 className="text-3xl  text-beige border-b border-white mx-20 py-8">
+				<h5 className="text-xl lg:text-3xl  text-beige border-b border-white mx-20 py-8">
 					SİZE ÖZEL BUTİK TURLAR
 				</h5>
 			</div>

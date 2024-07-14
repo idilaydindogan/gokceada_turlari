@@ -9,7 +9,6 @@ import React from "react";
 // import dalis from "../../../public/tourImages/dalis.jpeg";
 
 const SingleTourBox = ({ tour }) => {
-	console.log(tour);
 	return (
 		<Link
 			href={`/allTours/${tour.id}`}
