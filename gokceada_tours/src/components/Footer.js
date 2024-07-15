@@ -9,15 +9,11 @@ import { MdAlternateEmail } from "react-icons/md";
 
 const footerInfo = [
 	{
-		title: "Turlarımız",
-		children: [],
-	},
-	{
 		title: "İletişim",
 		children: [
 			{
 				icon: <FaPhoneVolume size={20} />,
-				name: "+90 538 353 74 94",
+				name: "+90 0538 353 74 54",
 			},
 			{
 				icon: <MdAlternateEmail size={20} />,
@@ -55,14 +51,6 @@ const Footer = () => {
 						/>
 					</Link>
 					<div className="flex space-x-12">
-						<div className="pt-4">
-							<h4 className="border-b border-blue font-semibold text-center mb-2">
-								Turlarımız
-							</h4>
-							<div>
-								<p>Tel: xxxxxxxxxxx</p>
-							</div>
-						</div>
 						<div className="pt-4">
 							<h4 className="border-b border-blue font-semibold text-center mb-2">
 								İletişim
