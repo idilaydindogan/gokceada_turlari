@@ -14,8 +14,8 @@ const AboutUs = () => {
 					objectFit="contain"
 				/>
 			</div>
-			<h1 className="font-semibold text-xl py-12">Biz Kimiz!</h1>
-			<div className="space-y-4">
+			<h1 className="font-semibold text-lg lg:text-xl py-12">Biz Kimiz!</h1>
+			<div className="space-y-4 text-sm lg:text-base">
 				<p>
 					Merhaba, ismim Ayşegül. Gökçeada’ya gidip gelmelerimin sonunda pandemi
 					sonrası Gökçeada ile olan bağım güçlendi ve yaklaşık 4 senedir

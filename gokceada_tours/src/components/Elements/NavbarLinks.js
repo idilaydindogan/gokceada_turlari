@@ -16,23 +16,23 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 	return (
 		<React.Fragment>
 			{/*MOBILE SCREEN */}
-			<div className="flex lg:hidden flex-col  space-y-4 z-50">
+			<div className="flex lg:hidden flex-col items-start pl-12 space-y-4 z-50 text-sm">
 				<div className="">
 					<button
 						onClick={() => setLinkOpen(!linkOpen)}
 						className="flex items-center"
 					>
-						<h4 className="font-semibold leading-6 pl-8 pr-12">Turlarımız</h4>
+						<h4 className="font-semibold leading-6  pr-12">Turlarımız</h4>
 
 						{!linkOpen ? <FaChevronDown /> : <FaChevronUp />}
 					</button>
 
 					{linkOpen && (
-						<div className=" pl-12 pt-4">
+						<div className="flex flex-col items-start pl-12 pt-4">
 							<button onClick={close}>
 								<Link
 									href="/allTours"
-									className=" font-semibold hover:decoration hover:underline cursor-pointer"
+									className=" font-semibold hover:decoration hover:underline cursor-pointer text-xs"
 								>
 									Tüm Turlar
 								</Link>
@@ -43,7 +43,7 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 									<button onClick={close}>
 										<Link
 											href={`/allTours/${item.id}`}
-											className="space-y-4 font-semibold hover:decoration hover:underline cursor-pointer"
+											className="truncate w-full text-xs space-y-4 font-semibold hover:decoration hover:underline cursor-pointer"
 										>
 											{item.fields.Name}
 										</Link>
@@ -56,7 +56,7 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 				{headers.map((header) => (
 					<button key={header.id} onClick={() => setOpen(false)}>
 						<Link href={header.href}>
-							<h4 className="font-semibold leading-6 pl-8">{header.name}</h4>
+							<h4 className="font-semibold leading-6 ">{header.name}</h4>
 						</Link>
 					</button>
 				))}

@@ -22,7 +22,7 @@ const TourPage = ({ id }) => {
 	}, [id]);
 
 	return (
-		<div className="min-h-screen mt-12 flex flex-col items-center space-y-4 px-12 mb-12">
+		<div className="min-h-screen mt-12 flex flex-col items-center space-y-4 px-8 md:px-12 mb-12">
 			<div className="flex justify-center">
 				{data.ImageSrc ? (
 					<Image
@@ -42,7 +42,7 @@ const TourPage = ({ id }) => {
 					/>
 				)}
 			</div>
-			<div className="text-2xl text-blue pt-4 bg-lightBlue rounded-md w-full text-center p-4 ">
+			<div className="text-xl lg:text-2xl text-blue pt-4 bg-lightBlue rounded-md w-full text-center p-4 ">
 				{data.Name}
 			</div>
 			<div className="bg-beige rounded-md p-6 flex flex-col md:flex-row gap-y-4 md:gap-x-4 text-blue ">
@@ -54,12 +54,14 @@ const TourPage = ({ id }) => {
 				</div>
 				<div className="space-y-4 text-blue md:w-3/5 border  border-lightBlue p-2">
 					<h5 className="font-medium underline">Tur Detayları</h5>
-					<p>{data.Body}</p>
-					<p>{data.Body2}</p>
-					<p>{data.Body3}</p>
-					<p>{data.Body4}</p>
-					<p>{data.Body5}</p>
-					<p>{data.Body6}</p>
+					<div className="text-sm lg:text-base space-y-2 md:space-y-4">
+						<p>{data.Body}</p>
+						<p>{data.Body2}</p>
+						<p>{data.Body3}</p>
+						<p>{data.Body4}</p>
+						<p>{data.Body5}</p>
+						<p>{data.Body6}</p>
+					</div>
 				</div>
 				<div className="hidden md:block w-2/5 space-y-4 border border-lightBlue p-2">
 					<h5 className="font-medium underline">Kişi Başı Tur Fiyatı</h5>

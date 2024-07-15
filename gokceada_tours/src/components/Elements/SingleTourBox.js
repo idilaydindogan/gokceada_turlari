@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Button from "./Button";
 
 const SingleTourBox = ({ tour }) => {
 	return (
@@ -17,8 +18,20 @@ const SingleTourBox = ({ tour }) => {
 					height={300}
 				/>
 			</div>
-			<div className="flex justify-center text-blue">
+			<div className="flex justify-center  text-blue">
 				<h2>{tour.fields.Name}</h2>
+			</div>
+			<div className="flex justify-around items-center text-blue w-full ">
+				<div className="space-y-2">
+					<h5 className="text-sm italic">{tour.fields.Location}</h5>
+					<div className="border-b border-blue w-28"></div>
+					<p className="text-sm">
+						{parseInt(tour.fields.Price).toLocaleString()} <span>TRY</span>
+					</p>
+				</div>
+				<div>
+					<Button title="Keşfet" id={tour.id} />
+				</div>
 			</div>
 		</Link>
 	);
