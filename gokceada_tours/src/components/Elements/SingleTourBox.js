@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Button from "./Button";
+import eco from "../../../public/tourImages/eco.png";
+import kultur from "../../../public/tourImages/kultur.png";
+import local from "../../../public/tourImages/local.png";
 
 const SingleTourBox = ({ tour }) => {
 	return (
@@ -22,7 +25,31 @@ const SingleTourBox = ({ tour }) => {
 				<h2>{tour.fields.Name}</h2>
 			</div>
 			<div className="flex justify-around items-center text-blue w-full ">
-				<div className="space-y-2">
+				<div>
+					{tour.fields.Type === "Eco" ? (
+						<Image
+							src={eco}
+							alt="gokceada tours"
+							className="text-center"
+							width={80}
+						/>
+					) : tour.fields.Type === "Culture" ? (
+						<Image
+							src={kultur}
+							alt="gokceada tours"
+							className="text-center"
+							width={80}
+						/>
+					) : (
+						<Image
+							src={local}
+							alt="gokceada tours"
+							className="text-center"
+							width={80}
+						/>
+					)}
+				</div>
+				<div className="space-y-2 w-full pl-4">
 					<h5 className="text-sm italic">{tour.fields.Location}</h5>
 					<div className="border-b border-blue w-28"></div>
 					<p className="text-sm">
