@@ -26,7 +26,7 @@ const Contact = () => {
 					</div>
 					<div className="flex items-center space-x-2 hover:scale-110 cursor-pointer">
 						<FaPhoneVolume size={20} />
-						<p>+90 538 353 74</p>
+						<p>+90 0538 353 74 54</p>
 					</div>
 					<Link
 						href="mailto:gokceadaturlari@gmail.com"

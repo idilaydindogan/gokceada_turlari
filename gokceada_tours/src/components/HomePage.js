@@ -21,8 +21,8 @@ const HomePage = () => {
 					height: "auto",
 				}}
 			/>
-			<div className="absolute top-[200px] flex flex-col w-full justify-center text-center">
-				<h1 className="text-3xl lg:text-5xl font-semibold text-beige border-t border-white mx-20 pt-8">
+			<div className="absolute top-[100px] lg:top-[200px] flex flex-col w-full justify-center text-center">
+				<h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-beige border-t border-white mx-20 pt-8">
 					GÖKÇEADA'DASINIZ YAVAŞLAYIN!
 				</h1>
 				<h5 className="text-xl lg:text-3xl  text-beige border-b border-white mx-20 py-8">
@@ -32,7 +32,7 @@ const HomePage = () => {
 			<SliderBanner />
 			<div className="flex justify-center gap-2 md:gap-8 px-2 my-10 text-sm lg:text-base border-y border-beige md:mx-12 py-8 cursor-pointer">
 				<Link href={`/tour_type/Eco`} className="flex flex-col items-center">
-					<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
+					<div className="bg-lightBlue rounded-full w-32 h-32  md:h-40 md:w-40 flex justify-center items-center hover:bg-beige">
 						<Image src={eco} alt="gokceada turlari brand logo" width={200} />
 					</div>
 					<h2 className="text-center text-blue font-mediun p-2">
@@ -43,7 +43,7 @@ const HomePage = () => {
 					href={`/tour_type/Culture`}
 					className="flex flex-col items-center"
 				>
-					<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
+					<div className="bg-lightBlue rounded-full w-32 h-32 md:h-40 md:w-40 flex justify-center items-center hover:bg-beige">
 						<Image src={kultur} alt="gokceada turlari brand logo" width={250} />
 					</div>
 					<h2 className="text-center text-blue font-mediun p-2">
@@ -51,7 +51,7 @@ const HomePage = () => {
 					</h2>
 				</Link>
 				<Link href={`/tour_type/Food`} className="flex flex-col items-center">
-					<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
+					<div className="bg-lightBlue rounded-full w-32 h-32  md:h-40 md:w-40 flex justify-center items-center hover:bg-beige">
 						<Image
 							src={local}
 							alt="gokceada turlari brand logo"

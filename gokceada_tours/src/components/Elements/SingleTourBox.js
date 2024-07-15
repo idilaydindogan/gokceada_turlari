@@ -10,7 +10,7 @@ const SingleTourBox = ({ tour }) => {
 	return (
 		<Link
 			href={`/allTours/${tour.id}`}
-			className="cursor-pointer w-[400px] border border-lightBlue p-4 mb-4 rounded-md flex flex-col items-center space-y-4 hover:border-2 hover:border-blue"
+			className="bg-beige  cursor-pointer lg:w-[400px] border border-lightBlue p-4 mb-4 rounded-md flex flex-col items-center space-y-4 hover:border-2 hover:border-blue"
 		>
 			<div className="flex justify-center">
 				<Image
