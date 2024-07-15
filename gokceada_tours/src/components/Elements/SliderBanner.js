@@ -11,6 +11,8 @@ import image3 from "../../../public/tourImages/yildiz.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 
+import Button from "./Button";
+
 const base = new Airtable({
 	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
 }).base("appXs4b7ViU3gh1eK");
@@ -84,12 +86,8 @@ const SliderBanner = () => {
 									<h5 className="px-2 w-full truncate text-sm font-light">
 										{tour.fields.Name}
 									</h5>
-									<Link
-										className="bg-blue text-beige px-4 py-1 text-sm rounded-md hover:bg-beige hover:text-blue"
-										href={`/allTours/${tour.id}`}
-									>
-										Keşfet
-									</Link>
+
+									<Button title="Keşfet" id={tour.id} />
 								</div>
 							</div>
 						))}{" "}

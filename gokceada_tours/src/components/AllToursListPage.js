@@ -24,24 +24,10 @@ const AllToursListPage = () => {
 
 	return (
 		<div className="min-h-screen px-8 mt-12 w-full">
-			<p>AYŞEGÜLE NOT</p>
-			<p>
-				bu sayfanın tam nasıl olmasını istiyorsun? Resimlerin altına farklı
-				hangi detaylar eklensin.
-			</p>
-			<p>Gönderdiğim dosyadakinin aynısını mı yapayım?</p>
-			<p>
-				Turların gruplanmasını istersen bana gruplara ayrılmış olarak belirtmen
-				gerek.
-			</p>
-			<p>
-				Şu anda üzerine basarak detay sayfasına gidiyor. KEŞFET'i mi tercih
-				ediyorsun?
-			</p>
 			<div className="bg-lightBlue w-full p-8 text-center rounded-md mb-8">
-				<h1 className="text-2xl font-semibold text-blue">Gökçeada Turlar</h1>
+				<h1 className="text-2xl font-semibold text-blue">Gökçeada Turları</h1>
 			</div>
-			<div className="grid md:grid-cols-2 justify-items-center">
+			<div className="grid grid-cols-1 md:grid-cols-2 justify-items-center">
 				{data.map((tour) => (
 					<SingleTourBox tour={tour} />
 				))}

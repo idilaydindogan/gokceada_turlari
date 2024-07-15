@@ -51,14 +51,12 @@ const Nav_Bar = () => {
 					</Link>
 					<NavbarLinks setOpen={setOpen} open={open} data={data} />
 				</div>
-				<button className="lg:hidden pr-8" onClick={() => setOpen(!open)}>
+				<button className="lg:hidden pr-4" onClick={() => setOpen(!open)}>
 					<GiHamburgerMenu size={28} />
 				</button>
 				{/*MOBILE NAVBAR*/}
 				{open && (
-					<div
-						className={`lg:hidden flex flex-col bg-beige absolute w-full h-full bottom-0 z-50 py-16  space-y-4 lg:space-y-0 border-2  border-blue duration-300 `}
-					>
+					<div className="lg:hidden flex flex-col justify-start bg-beige absolute w-full h-screen bottom-0 z-50 py-8  space-y-4 lg:space-y-0 border-2  border-blue">
 						<button
 							className="pr-8 flex justify-end"
 							onClick={() => setOpen(!open)}
@@ -74,7 +72,9 @@ const Nav_Bar = () => {
 						</Link>
 						<button onClick={() => setOpen(false)}>
 							<Link href="/">
-								<h4 className="font-semibold leading-6 pl-8">Anasayfa</h4>
+								<h4 className="font-semibold leading-6 flex justify-start pl-12 text-sm">
+									Anasayfa
+								</h4>
 							</Link>{" "}
 						</button>
 						<NavbarLinks data={data} setOpen={setOpen} open={open} />

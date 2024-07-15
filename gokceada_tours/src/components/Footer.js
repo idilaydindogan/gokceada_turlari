@@ -30,7 +30,7 @@ const footerInfo = [
 const Footer = () => {
 	// <footer className="mt-20 py-4 px-8 w-full absolute bottom-0">
 	return (
-		<footer className="">
+		<footer className=" px-4 lg:px-0">
 			<div className="hidden lg:block">
 				<div className="bg-beige border-b border-blue h-16 flex justify-between px-20 items-center text-blue">
 					<h2 className="text-2xl font-semibold">Gökçeada Turları</h2>
@@ -115,7 +115,7 @@ const Footer = () => {
 					/>
 				))}
 			</div>
-			<div className="bg-lightBlue h-12 flex justify-center items-center text-xs text-blue">
+			<div className="bg-lightBlue h-10 flex justify-center items-center text-xs text-blue rounded-md lg:rounded-none mb-1">
 				<p>Copyright © 2024 KETENCEK I.T.</p>
 			</div>
 		</footer>
