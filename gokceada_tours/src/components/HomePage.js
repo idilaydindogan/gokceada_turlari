@@ -1,6 +1,7 @@
 import React from "react";
 import homebanner from "../../public/homebanner.webp";
 import Image from "next/image";
+import SliderBanner from "./Elements/SliderBanner";
 
 const HomePage = () => {
 	return (
@@ -24,6 +25,7 @@ const HomePage = () => {
 					SİZE ÖZEL BUTİK TURLAR
 				</h5>
 			</div>
+			<SliderBanner />
 			<div className="flex justify-center gap-2 md:gap-8 px-2 my-10 text-sm lg:text-base border-y border-beige md:mx-12 py-8 cursor-pointer">
 				<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
 					<h2 className="text-center text-blue font-bold p-2">
