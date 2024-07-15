@@ -2,6 +2,10 @@ import React from "react";
 import homebanner from "../../public/homebanner.webp";
 import Image from "next/image";
 import SliderBanner from "./Elements/SliderBanner";
+import eco from "../../public/tourImages/eco.png";
+import kultur from "../../public/tourImages/kultur.png";
+import local from "../../public/tourImages/local.png";
+import Link from "next/link";
 
 const HomePage = () => {
 	return (
@@ -27,21 +31,38 @@ const HomePage = () => {
 			</div>
 			<SliderBanner />
 			<div className="flex justify-center gap-2 md:gap-8 px-2 my-10 text-sm lg:text-base border-y border-beige md:mx-12 py-8 cursor-pointer">
-				<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
-					<h2 className="text-center text-blue font-bold p-2">
+				<Link href={`/tour_type/Eco`} className="flex flex-col items-center">
+					<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
+						<Image src={eco} alt="gokceada turlari brand logo" width={200} />
+					</div>
+					<h2 className="text-center text-blue font-mediun p-2">
 						EKOTURIZM TURLARI
 					</h2>
-				</div>
-				<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
-					<h2 className="text-center text-blue font-bold p-4">
+				</Link>
+				<Link
+					href={`/tour_type/Culture`}
+					className="flex flex-col items-center"
+				>
+					<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
+						<Image src={kultur} alt="gokceada turlari brand logo" width={250} />
+					</div>
+					<h2 className="text-center text-blue font-mediun p-2">
 						KÜLTÜR TURLARI
 					</h2>
-				</div>
-				<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
-					<h2 className="text-center text-blue font-bold p-4">
+				</Link>
+				<Link href={`/tour_type/Food`} className="flex flex-col items-center">
+					<div className="bg-lightBlue rounded-full h-40 w-40 flex justify-center items-center hover:bg-beige">
+						<Image
+							src={local}
+							alt="gokceada turlari brand logo"
+							width={160}
+							className="p-4"
+						/>
+					</div>
+					<h2 className="text-center text-blue font-mediun p-2">
 						YEREL LEZZETLER
 					</h2>
-				</div>
+				</Link>
 			</div>
 		</div>
 	);

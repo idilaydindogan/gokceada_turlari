@@ -6,6 +6,9 @@ import Image from "next/image";
 const base = new Airtable({
 	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
 }).base("appXs4b7ViU3gh1eK");
+import eco from "../../public/tourImages/eco.png";
+import kultur from "../../public/tourImages/kultur.png";
+import local from "../../public/tourImages/local.png";
 
 const TourPage = ({ id }) => {
 	const [data, setData] = useState([]);
@@ -68,6 +71,31 @@ const TourPage = ({ id }) => {
 					<p className="bg-lightBlue py-4 text-xl font-semibold text-center">
 						{parseInt(data.Price).toLocaleString()} <span>TRY</span>
 					</p>
+					<div className="flex justify-start space-x-8 items-center">
+						{data.Type === "Eco" ? (
+							<Image
+								src={eco}
+								alt="gokceada tours"
+								className="text-center"
+								width={60}
+							/>
+						) : data.Type === "Culture" ? (
+							<Image
+								src={kultur}
+								alt="gokceada tours"
+								className="text-center"
+								width={60}
+							/>
+						) : (
+							<Image
+								src={local}
+								alt="gokceada tours"
+								className="text-center"
+								width={60}
+							/>
+						)}
+						<h2 className="text-lg">{data.TypeName}</h2>
+					</div>
 				</div>
 			</div>
 		</div>
