@@ -5,7 +5,7 @@ import Airtable from "airtable";
 import Image from "next/image";
 const base = new Airtable({
 	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
-}).base("appXs4b7ViU3gh1eK");
+}).base("appnO1e5NKNO2456y");
 import eco from "../../public/tourImages/eco.png";
 import kultur from "../../public/tourImages/kultur.png";
 import local from "../../public/tourImages/local.png";
