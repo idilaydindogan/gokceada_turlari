@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/Keci_logo_removebg.png";
 import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 
@@ -30,17 +31,28 @@ const Footer = () => {
 			<div className="hidden lg:block">
 				<div className="bg-beige border-b border-blue h-16 flex justify-between px-20 items-center text-blue">
 					<h2 className="text-2xl font-semibold">Gökçeada Turları</h2>
-					<Link
-						href={
-							"https://www.instagram.com/gokceadatours/?igsh=MWVqYWhwZmRmMHF3dQ%3D%3D"
-						}
-						target="_blank"
-					>
-						<FaInstagram
-							size={32}
-							className="mr-12 hover:scale-125 cursor-pointer"
-						/>
-					</Link>
+					<div className="flex">
+						<Link
+							href={
+								"https://www.instagram.com/gokceadatours/?igsh=MWVqYWhwZmRmMHF3dQ%3D%3D"
+							}
+							target="_blank"
+						>
+							<FaInstagram
+								size={32}
+								className="mr-8 hover:scale-125 cursor-pointer"
+							/>
+						</Link>
+						<Link
+							href={"https://www.facebook.com/profile.php?id=61562285193931								"}
+							target="_blank"
+						>
+							<FaFacebook
+								size={32}
+								className="mr-12 hover:scale-125 cursor-pointer"
+							/>
+						</Link>
+					</div>
 				</div>
 				<div className="bg-beige flex justify-between px-20 py-4 items-start  text-blue">
 					<Link className="" href="/">
@@ -82,17 +94,28 @@ const Footer = () => {
 				</Link>
 				<div className="bg-blue border-b border-beige rounded-md mb-4 h-16 flex justify-between px-4  items-center text-beige">
 					<h2 className="text-lg">Gökçeada Turları</h2>
-					<Link
-						href={
-							"https://www.instagram.com/gokceadatours/?igsh=MWVqYWhwZmRmMHF3dQ%3D%3D"
-						}
-						target="_blank"
-					>
-						<FaInstagram
-							size={32}
-							className=" hover:scale-125 cursor-pointer"
-						/>
-					</Link>
+					<div className="flex">
+						<Link
+							href={
+								"https://www.instagram.com/gokceadatours/?igsh=MWVqYWhwZmRmMHF3dQ%3D%3D"
+							}
+							target="_blank"
+						>
+							<FaInstagram
+								size={32}
+								className="mr-4 hover:scale-125 cursor-pointer"
+							/>
+						</Link>
+						<Link
+							href={"https://www.facebook.com/profile.php?id=61562285193931								"}
+							target="_blank"
+						>
+							<FaFacebook
+								size={32}
+								className=" hover:scale-125 cursor-pointer"
+							/>
+						</Link>
+					</div>
 				</div>
 				{footerInfo.map((info, index) => (
 					<Accordion

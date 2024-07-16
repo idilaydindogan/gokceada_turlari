@@ -21,7 +21,7 @@ const SingleTourBox = ({ tour }) => {
 					height={300}
 				/>
 			</div>
-			<div className="flex justify-center  text-blue">
+			<div className="flex justify-center  text-blue text-sm lg:text-base">
 				<h2>{tour.fields.Name}</h2>
 			</div>
 			<div className="flex justify-around items-center text-blue w-full ">
