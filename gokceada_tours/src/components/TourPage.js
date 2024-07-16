@@ -48,56 +48,75 @@ const TourPage = ({ id }) => {
 			<div className="text-xl lg:text-2xl text-blue pt-4 bg-lightBlue rounded-md w-full text-center p-4 ">
 				{data.Name}
 			</div>
-			<div className="bg-beige rounded-md p-6 flex flex-col md:flex-row gap-y-4 md:gap-x-4 text-blue ">
-				<div className="md:hidden md:w-2/5 space-y-4 border border-lightBlue p-2">
-					<h5 className="font-medium underline">Kişi Başı Tur Fiyatı</h5>
-					<p className="bg-lightBlue py-4 text-xl font-semibold text-center">
-						{parseInt(data.Price).toLocaleString()} <span>TRY</span>
-					</p>
-				</div>
-				<div className="space-y-4 text-blue md:w-3/5 border  border-lightBlue p-2">
-					<h5 className="font-medium underline">Tur Detayları</h5>
-					<div className="text-sm lg:text-base space-y-2 md:space-y-4">
-						<p>{data.Body}</p>
-						<p>{data.Body2}</p>
-						<p>{data.Body3}</p>
-						<p>{data.Body4}</p>
-						<p>{data.Body5}</p>
-						<p>{data.Body6}</p>
+
+			{data.Body && (
+				<div className="bg-beige rounded-md px-6 py-8 flex flex-col md:flex-row gap-y-4 md:gap-x-4 text-blue ">
+					<div className="md:hidden md:w-2/5 space-y-4 border border-lightBlue p-2">
+						<h5 className="font-medium underline">Kişi Başı Tur Fiyatı</h5>
+						<p className="bg-lightBlue py-4 text-xl font-semibold text-center">
+							{parseInt(data.Price).toLocaleString()} <span>TRY</span>
+						</p>
 					</div>
-				</div>
-				<div className="hidden md:block w-2/5 space-y-4 border border-lightBlue p-2">
-					<h5 className="font-medium underline">Kişi Başı Tur Fiyatı</h5>
-					<p className="bg-lightBlue py-4 text-xl font-semibold text-center">
-						{parseInt(data.Price).toLocaleString()} <span>TRY</span>
-					</p>
-					<div className="flex justify-start space-x-8 items-center">
-						{data.Type === "Eco" ? (
-							<Image
-								src={eco}
-								alt="gokceada tours"
-								className="text-center"
-								width={60}
-							/>
-						) : data.Type === "Culture" ? (
-							<Image
-								src={kultur}
-								alt="gokceada tours"
-								className="text-center"
-								width={60}
-							/>
-						) : (
-							<Image
-								src={local}
-								alt="gokceada tours"
-								className="text-center"
-								width={60}
-							/>
+					<div className="space-y-4 text-blue md:w-3/5 border  border-lightBlue p-4">
+						<h5 className="font-medium underline">Tur Detayları</h5>
+						<div className="text-sm lg:text-base space-y-2 md:space-y-4">
+							<p>{data.Body}</p>
+							<p>{data.Body2}</p>
+							<p>{data.Body3}</p>
+							<p>{data.Body4}</p>
+							<p>{data.Body5}</p>
+							<p>{data.Body6}</p>
+							{(data.TourNotes || data.TourNotes2) && (
+								<div className="space-y-2 text-sm pt-8 pb-4">
+									<p>*{data.TourNotes}</p>
+									{data.TourNotes2 && <p>*{data.TourNotes2}</p>}
+								</div>
+							)}
+						</div>
+					</div>
+					<div className="hidden md:block w-2/5 space-y-4 border border-lightBlue p-4">
+						<h5 className="font-medium underline">Kişi Başı Tur Fiyatı</h5>
+						<p className="bg-lightBlue py-4 text-xl font-semibold text-center">
+							{parseInt(data.Price).toLocaleString()} <span>TRY</span>
+						</p>
+						<div className="flex justify-start space-x-8 items-center">
+							{data.Type === "Eco" ? (
+								<Image
+									src={eco}
+									alt="gokceada tours"
+									className="text-center"
+									width={60}
+								/>
+							) : data.Type === "Culture" ? (
+								<Image
+									src={kultur}
+									alt="gokceada tours"
+									className="text-center"
+									width={60}
+								/>
+							) : (
+								<Image
+									src={local}
+									alt="gokceada tours"
+									className="text-center"
+									width={60}
+								/>
+							)}
+							<h2 className="text-lg">{data.TypeName}</h2>
+						</div>
+						{data.Services && (
+							<div className="space-y-2">
+								<h5 className="font-medium underline">
+									Fiyata dahil hizmetler{" "}
+								</h5>
+								<p>{data.Services}</p>
+								<p>{data.Services2}</p>
+								<p>{data.Services3}</p>
+							</div>
 						)}
-						<h2 className="text-lg">{data.TypeName}</h2>
 					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 };

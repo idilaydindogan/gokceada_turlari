@@ -34,10 +34,12 @@ const SliderBanner = () => {
 	const settings = {
 		dots: true,
 		infinite: true,
-		speed: 500,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		initialSlide: 0,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 4000,
+		autoplaySpeed: 4000,
+		cssEase: "linear",
 		responsive: [
 			{
 				breakpoint: 1024,

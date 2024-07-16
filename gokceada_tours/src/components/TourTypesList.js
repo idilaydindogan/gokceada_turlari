@@ -36,7 +36,7 @@ const TourTypesList = ({ Type }) => {
 				</h1>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center">
+			<div className="md:w-[820px] xl:w-[1250px] m-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center">
 				{data.map((filteredItem) => (
 					<SingleTourBox tour={filteredItem} />
 				))}

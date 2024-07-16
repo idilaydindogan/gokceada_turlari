@@ -10,17 +10,19 @@ import Link from "next/link";
 const HomePage = () => {
 	return (
 		<div className=" w-full md:min-h-screen  relative">
-			<Image
-				src={homebanner}
-				alt="gokceada turlari brand logo"
-				className="opacity-90"
-				sizes="100vw"
-				// Make the image display full width
-				style={{
-					width: "100%",
-					height: "auto",
-				}}
-			/>
+			<div className="mt-4 ">
+				<Image
+					src={homebanner}
+					alt="gokceada turlari brand logo"
+					className="opacity-90 m-auto"
+					sizes="80vw"
+					// Make the image display full width
+					style={{
+						width: "80%",
+						height: "auto",
+					}}
+				/>
+			</div>
 			<div className="absolute top-[100px] lg:top-[200px] flex flex-col w-full justify-center text-center">
 				<h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-beige border-t border-white mx-20 pt-8">
 					GÖKÇEADA'DASINIZ YAVAŞLAYIN!
@@ -35,7 +37,7 @@ const HomePage = () => {
 					<div className="bg-lightBlue rounded-full w-32 h-32  md:h-40 md:w-40 flex justify-center items-center hover:bg-beige">
 						<Image src={eco} alt="gokceada turlari brand logo" width={200} />
 					</div>
-					<h2 className="text-center text-blue font-mediun p-2">
+					<h2 className="text-center text-blue font-mediun p-2 hover:underline">
 						EKOTURIZM TURLARI
 					</h2>
 				</Link>
@@ -46,7 +48,7 @@ const HomePage = () => {
 					<div className="bg-lightBlue rounded-full w-32 h-32 md:h-40 md:w-40 flex justify-center items-center hover:bg-beige">
 						<Image src={kultur} alt="gokceada turlari brand logo" width={250} />
 					</div>
-					<h2 className="text-center text-blue font-mediun p-2">
+					<h2 className="text-center text-blue font-mediun p-2 hover:underline">
 						KÜLTÜR TURLARI
 					</h2>
 				</Link>
@@ -59,7 +61,7 @@ const HomePage = () => {
 							className="p-4"
 						/>
 					</div>
-					<h2 className="text-center text-blue font-mediun p-2">
+					<h2 className="text-center text-blue font-mediun p-2 hover:underline">
 						YEREL LEZZETLER
 					</h2>
 				</Link>
