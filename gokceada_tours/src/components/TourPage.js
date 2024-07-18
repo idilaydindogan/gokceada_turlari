@@ -114,7 +114,7 @@ const TourPage = ({ id }) => {
 						</div>
 						{(data.TourNotes || data.TourNotes2) && (
 							<div className="flex flex-col  justify-end space-y-2 text-sm pt-12">
-								<p>*{data.TourNotes}</p>
+								{data.TourNotes && <p>*{data.TourNotes}</p>}
 								{data.TourNotes2 && <p>*{data.TourNotes2}</p>}
 							</div>
 						)}

@@ -1,5 +1,4 @@
 import React from "react";
-import personalCard from "../../public/personal_card.jpg";
 import aboutUs from "../../public/aboutUs.jpeg";
 import Image from "next/image";
 
@@ -8,7 +7,7 @@ const AboutUs = () => {
 		<div className="min-h-screen text-blue px-12 my-12  w-full">
 			<div className="flex lg:flex-row flex-col lg:space-x-4 gap-y-4 lg:gap-y-0  items-center lg:h-[600px]">
 				<div className="lg:w-1/2 border border-beige h-full p-8 order-last lg:order-first">
-					<h1 className="font-semibold text-lg lg:text-xl py-4">Biz Kimiz!</h1>
+					<h1 className="font-semibold text-lg lg:text-xl py-4">Ben Kimim!</h1>
 					<div className="space-y-4 text-sm lg:text-base">
 						<p>
 							Merhaba, ismim Ayşegül. Gökçeada’ya gidip gelmelerimin sonunda

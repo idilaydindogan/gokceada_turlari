@@ -28,7 +28,7 @@ const AboutPage = () => {
 	}, []);
 
 	return (
-		<div className="min-h-screen">
+		<div className="min-h-screen ">
 			<div className="flex justify-center  relative mt-4">
 				<Image
 					src={image}
@@ -41,7 +41,7 @@ const AboutPage = () => {
 					</h1>
 				</div>
 			</div>
-			<div className="">
+			<div className="py-12">
 				{data.map((item) => (
 					<AboutSections data={item} />
 				))}

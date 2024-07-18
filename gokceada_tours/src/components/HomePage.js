@@ -1,12 +1,10 @@
-import React from "react";
-// import homebanner from "../../public/homebanner.webp";
-import homebanner from "../../public/anasayfa.webp";
 import Image from "next/image";
-import SliderBanner from "./Elements/SliderBanner";
+import Link from "next/link";
+import homebanner from "../../public/anasayfa.webp";
 import eco from "../../public/tourImages/eco.png";
 import kultur from "../../public/tourImages/kultur.png";
 import local from "../../public/tourImages/local.png";
-import Link from "next/link";
+import SliderBanner from "./Elements/SliderBanner";
 
 const HomePage = () => {
 	return (
@@ -17,7 +15,6 @@ const HomePage = () => {
 					alt="gokceada turlari brand logo"
 					className="opacity-90 m-auto"
 					sizes="80vw"
-					// Make the image display full width
 					style={{
 						width: "80%",
 						height: "auto",

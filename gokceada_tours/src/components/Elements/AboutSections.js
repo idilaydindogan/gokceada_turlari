@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSections = ({ data }) => {
 	return (
-		<div className="px-8 md:px-20 my-8 text-blue">
+		<div className="px-8 md:px-20  text-blue">
 			<div key={data.id} className="">
 				<h1 className="text-lg md:text-2xl pb-2 font-semibold px-2">
 					{data.fields.MainTitle}
