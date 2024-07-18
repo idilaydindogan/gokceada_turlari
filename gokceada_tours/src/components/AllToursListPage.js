@@ -24,7 +24,7 @@ const AllToursListPage = () => {
 	}, []);
 
 	return (
-		<div className="min-h-screen px-8 mt-12 w-full">
+		<div className="min-h-screen px-8 my-12 w-full">
 			<div className="bg-lightBlue w-full p-8 text-center rounded-md mb-8">
 				<h1 className="text-2xl font-semibold text-blue">Gökçeada Turları</h1>
 			</div>
