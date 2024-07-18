@@ -66,52 +66,56 @@ const TourPage = ({ id }) => {
 							<p>{data.Body4}</p>
 							<p>{data.Body5}</p>
 							<p>{data.Body6}</p>
-							{(data.TourNotes || data.TourNotes2) && (
-								<div className="space-y-2 text-sm pt-8 pb-4">
-									<p>*{data.TourNotes}</p>
-									{data.TourNotes2 && <p>*{data.TourNotes2}</p>}
+						</div>
+					</div>
+					<div className=" hidden md:flex md:flex-col justify-between w-2/5 space-y-4 border border-lightBlue p-4 ">
+						<div>
+							<div className="space-y-4">
+								<h5 className="font-medium underline">Kişi Başı Tur Fiyatı</h5>
+								<p className="bg-lightBlue py-4 text-xl font-semibold text-center">
+									{parseInt(data.Price).toLocaleString()} <span>TRY</span>
+								</p>
+							</div>
+							<div className="mt-4 flex justify-start space-x-8 items-center">
+								{data.Type === "Eco" ? (
+									<Image
+										src={eco}
+										alt="gokceada tours"
+										className="text-center"
+										width={60}
+									/>
+								) : data.Type === "Culture" ? (
+									<Image
+										src={kultur}
+										alt="gokceada tours"
+										className="text-center"
+										width={60}
+									/>
+								) : (
+									<Image
+										src={local}
+										alt="gokceada tours"
+										className="text-center"
+										width={60}
+									/>
+								)}
+								<h2 className="text-lg">{data.TypeName}</h2>
+							</div>
+							{data.Services && (
+								<div className="space-y-2 mt-4">
+									<h5 className="font-medium underline">
+										Fiyata dahil hizmetler{" "}
+									</h5>
+									<p>{data.Services}</p>
+									<p>{data.Services2}</p>
+									<p>{data.Services3}</p>
 								</div>
 							)}
 						</div>
-					</div>
-					<div className="hidden md:block w-2/5 space-y-4 border border-lightBlue p-4">
-						<h5 className="font-medium underline">Kişi Başı Tur Fiyatı</h5>
-						<p className="bg-lightBlue py-4 text-xl font-semibold text-center">
-							{parseInt(data.Price).toLocaleString()} <span>TRY</span>
-						</p>
-						<div className="flex justify-start space-x-8 items-center">
-							{data.Type === "Eco" ? (
-								<Image
-									src={eco}
-									alt="gokceada tours"
-									className="text-center"
-									width={60}
-								/>
-							) : data.Type === "Culture" ? (
-								<Image
-									src={kultur}
-									alt="gokceada tours"
-									className="text-center"
-									width={60}
-								/>
-							) : (
-								<Image
-									src={local}
-									alt="gokceada tours"
-									className="text-center"
-									width={60}
-								/>
-							)}
-							<h2 className="text-lg">{data.TypeName}</h2>
-						</div>
-						{data.Services && (
-							<div className="space-y-2">
-								<h5 className="font-medium underline">
-									Fiyata dahil hizmetler{" "}
-								</h5>
-								<p>{data.Services}</p>
-								<p>{data.Services2}</p>
-								<p>{data.Services3}</p>
+						{(data.TourNotes || data.TourNotes2) && (
+							<div className="flex flex-col  justify-end space-y-2 text-sm pt-12">
+								<p>*{data.TourNotes}</p>
+								{data.TourNotes2 && <p>*{data.TourNotes2}</p>}
 							</div>
 						)}
 					</div>

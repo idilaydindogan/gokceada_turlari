@@ -1,5 +1,6 @@
 import React from "react";
-import homebanner from "../../public/homebanner.webp";
+// import homebanner from "../../public/homebanner.webp";
+import homebanner from "../../public/anasayfa.webp";
 import Image from "next/image";
 import SliderBanner from "./Elements/SliderBanner";
 import eco from "../../public/tourImages/eco.png";
@@ -31,14 +32,14 @@ const HomePage = () => {
 					SİZE ÖZEL BUTİK TURLAR
 				</h5>
 			</div>
-			<SliderBanner />
-			<div className="flex justify-center gap-2 md:gap-8 px-2 my-10 text-sm lg:text-base border-y border-beige md:mx-12 py-8 cursor-pointer">
+
+			<div className="bg-beige flex justify-center gap-2 md:gap-8 px-2 my-10 text-sm lg:text-base border-y border-beige  py-8 cursor-pointer">
 				<Link href={`/tour_type/Eco`} className="flex flex-col items-center">
 					<div className="bg-lightBlue rounded-full w-32 h-32  md:h-40 md:w-40 flex justify-center items-center hover:bg-beige">
 						<Image src={eco} alt="gokceada turlari brand logo" width={200} />
 					</div>
 					<h2 className="text-center text-blue font-mediun p-2 hover:underline">
-						EKOTURIZM TURLARI
+						EKOTURİZM TURLARI
 					</h2>
 				</Link>
 				<Link
@@ -65,6 +66,10 @@ const HomePage = () => {
 						YEREL LEZZETLER
 					</h2>
 				</Link>
+			</div>
+			<SliderBanner />
+			<div className="bg-lightBlue h-20 flex items-center justify-center mb-12 text-lg text-blue font-semibold">
+				<h5>Kişilere ve gruplara özel kapalı turlar için iletişime geçiniz.</h5>
 			</div>
 		</div>
 	);
