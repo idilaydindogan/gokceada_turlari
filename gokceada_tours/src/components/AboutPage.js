@@ -1,12 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
-require("dotenv").config();
 import Airtable from "airtable";
-
-import image from "../../public/about_island.jpg";
-
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import image from "../../public/about_island.jpg";
 import AboutSections from "./Elements/AboutSections";
+require("dotenv").config();
 
 const base = new Airtable({
 	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,

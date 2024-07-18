@@ -1,15 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import logo from "../../public/Keci_logo_removebg.png";
-
-require("dotenv").config();
 import Airtable from "airtable";
-import Link from "next/link";
 import Image from "next/image";
-import NavbarLinks from "./Elements/NavbarLinks";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
-
+import logo from "../../public/Keci_logo_removebg.png";
+import NavbarLinks from "./Elements/NavbarLinks";
+require("dotenv").config();
 const base = new Airtable({
 	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
 }).base("appnO1e5NKNO2456y");

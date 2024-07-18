@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
-require("dotenv").config();
 import Airtable from "airtable";
+import { useEffect, useState } from "react";
 import SingleTourBox from "./Elements/SingleTourBox";
+require("dotenv").config();
 
 const base = new Airtable({
 	apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,

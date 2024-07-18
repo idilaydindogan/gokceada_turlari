@@ -1,16 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
-require("dotenv").config();
 import Airtable from "airtable";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import image1 from "../../../public/tourImages/yildiz.jpeg";
-import image2 from "../../../public/tourImages/rumKoy.jpeg";
-import image3 from "../../../public/tourImages/yildiz.jpeg";
 import Image from "next/image";
-import Link from "next/link";
-
+import { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+require("dotenv").config();
 import Button from "./Button";
 
 const base = new Airtable({
@@ -101,21 +96,3 @@ const SliderBanner = () => {
 };
 
 export default SliderBanner;
-
-// <Slider {...settings} className="">
-// {data.map((tour) => (
-// 	<div className="w-60 h-30 flex justify-center">
-// 		<Image
-// 			src={`/tourImages/${tour.fields.ImageSrc}`}
-// 			alt="gokceada tours"
-// 			className="slide_image"
-// 			objectFit="cover"
-// 			width={200}
-// 			height={200}
-// 		/>
-// 		<div className="flex justify-center text-center text-sm pt-2 text-blue">
-// 			<h4 className="truncate">{tour.fields.Name}</h4>
-// 		</div>
-// 	</div>
-// ))}
-// </Slider>
