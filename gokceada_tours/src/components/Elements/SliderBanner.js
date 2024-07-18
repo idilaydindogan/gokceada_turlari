@@ -74,11 +74,11 @@ const SliderBanner = () => {
 					<Slider {...settings} className="">
 						{data.map((tour) => (
 							<div className="border border-lightBlue h-[280px] text-blue rounded-lg">
-								<div className="bg-beige flex justify-center items-center p-2 h-44">
+								<div className="bg-beige flex justify-center items-center p-2 h-44 rounded-lg">
 									<Image
 										src={`/tourImages/${tour.fields.ImageSrc}`}
 										alt="gokceada tours"
-										className="slide_image rounded-lg"
+										className="slide_image"
 										objectFit="cover"
 										width={200}
 										height={200}

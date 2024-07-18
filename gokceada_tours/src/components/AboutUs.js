@@ -1,5 +1,4 @@
 import React from "react";
-import personalCard from "../../public/personal_card.jpg";
 import aboutUs from "../../public/aboutUs.jpeg";
 import Image from "next/image";
 
