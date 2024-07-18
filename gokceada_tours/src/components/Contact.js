@@ -1,10 +1,9 @@
-import React from "react";
-import contact from "../../public/contact.png";
 import Image from "next/image";
+import Link from "next/link";
+import { FaUser } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
-import Link from "next/link";
+import contact from "../../public/contact.png";
 
 const Contact = () => {
 	return (

@@ -136,5 +136,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// <Accordion title="deneme" />

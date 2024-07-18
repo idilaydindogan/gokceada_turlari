@@ -25,6 +25,7 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 		document.body.addEventListener("click", closeDropdown);
 		return () => document.body.removeEventListener("click", closeDropdown);
 	}, []);
+
 	return (
 		<React.Fragment>
 			{/*MOBILE SCREEN */}
