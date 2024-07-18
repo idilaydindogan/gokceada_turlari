@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 const headers = [
 	{ id: 3, name: "Gökçeada Hakkında", href: "/about" },
@@ -13,6 +13,18 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 		setLinkOpen(false);
 		setOpen(false);
 	};
+
+	const btnRef = useRef();
+
+	useEffect(() => {
+		const closeDropdown = (e) => {
+			if (!btnRef.current.contains(e.target)) {
+				setLinkOpen(false);
+			}
+		};
+		document.body.addEventListener("click", closeDropdown);
+		return () => document.body.removeEventListener("click", closeDropdown);
+	}, []);
 	return (
 		<React.Fragment>
 			{/*MOBILE SCREEN */}
@@ -64,7 +76,7 @@ const NavbarLinks = ({ data, setOpen, open }) => {
 
 			{/*LG SCREEN */}
 			<div className="hidden lg:flex lg:flex-row  lg:gap-x-4 lg:relative ">
-				<div className="">
+				<div className="" ref={btnRef}>
 					<div className="flex items-center">
 						<button onClick={() => setOpen(false)}>
 							<h4 className="font-semibold leading-6 lg:px-2 xl:pl-4 pr-6">

@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 require("dotenv").config();
 import Airtable from "airtable";
-import image from "../../public/about_island1.jpg";
+
+import image from "../../public/about_island.jpg";
 
 import Image from "next/image";
 import AboutSections from "./Elements/AboutSections";
@@ -28,15 +29,13 @@ const AboutPage = () => {
 
 	return (
 		<div className="min-h-screen">
-			<div className=" w-full  relative mt-4">
+			<div className="flex justify-center  relative mt-4">
 				<Image
 					src={image}
 					alt="gokceada turlari brand logo"
-					className="opacity-90"
-					sizes="100vw"
-					objectFit="contain"
+					className="opacity-90 w-[80%]"
 				/>
-				<div className="absolute top-[50px] md:top-[200px] flex flex-col w-full justify-center text-center">
+				<div className="absolute top-[120px] md:top-[350px] flex flex-col w-full justify-center text-center">
 					<h1 className="text-2xl lg:text-5xl font-semibold text-beige  mx-20 pt-8">
 						GÖKÇEADA'DASINIZ YAVAŞLAYIN!
 					</h1>
