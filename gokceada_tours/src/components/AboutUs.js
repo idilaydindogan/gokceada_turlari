@@ -1,5 +1,6 @@
 import React from "react";
 import personalCard from "../../public/personal_card.jpg";
+import abourUs from "../../public/aboutUs.jpeg";
 import Image from "next/image";
 
 const AboutUs = () => {
@@ -7,11 +8,10 @@ const AboutUs = () => {
 		<div className="min-h-screen text-blue px-12 mt-12">
 			<div className=" w-full flex justify-center mt-4">
 				<Image
-					src={personalCard}
+					src={abourUs}
 					alt="gokceada turlari brand logo"
-					className="opacity-90"
-					sizes="100vw"
-					objectFit="contain"
+					className="opacity-90 w-[350px]"
+					objectFit="cover"
 				/>
 			</div>
 			<h1 className="font-semibold text-lg lg:text-xl py-12">Biz Kimiz!</h1>
