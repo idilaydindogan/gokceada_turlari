@@ -14,7 +14,7 @@ const footerInfo = [
 		children: [
 			{
 				icon: <FaPhoneVolume size={20} />,
-				name: "+90 0538 353 74 54",
+				name: "+90 538 353 74 54",
 			},
 			{
 				icon: <MdAlternateEmail size={20} />,
@@ -25,7 +25,6 @@ const footerInfo = [
 ];
 
 const Footer = () => {
-	// <footer className="mt-20 py-4 px-8 w-full absolute bottom-0">
 	return (
 		<footer className=" px-4 lg:px-0">
 			<div className="hidden lg:block">
@@ -68,10 +67,13 @@ const Footer = () => {
 								İletişim
 							</h4>
 							<div className="space-y-2">
-								<div className="flex items-center space-x-2">
+								<Link
+									href="tel:00905383537454"
+									className="flex items-center space-x-2"
+								>
 									<FaPhoneVolume size={20} />
-									<p>+90 0538 353 74 54</p>
-								</div>
+									<p>+90 538 353 74 54</p>
+								</Link>
 								<Link
 									href="mailto:gokceadaturlari@gmail.com"
 									className="flex items-center space-x-2"
